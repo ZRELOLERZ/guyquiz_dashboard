@@ -12,6 +12,9 @@ exports.up = async function (knex) {
       table.increments('ID');
       table.timestamp('dateCreated').defaultTo(knex.fn.now(6));
       table.timestamp('dateModified').defaultTo(knex.fn.now(6));
+      table.integer('questionYear');
+      table.string('questionType');
+      table.string('questionAuthor');
       table.string('questionText');
       table.string('questionTextHasImage');
     }),
@@ -45,6 +48,9 @@ exports.up = async function (knex) {
       table.increments('ID');
       table.timestamp('dateCreated').defaultTo(knex.fn.now(6));
       table.timestamp('dateModified').defaultTo(knex.fn.now(6));
+      table.integer('questionYear');
+      table.string('questionType');
+      table.string('questionAuthor');
       table.string('questionText');
       table.boolean('questionTextHasImage');
       table.string('answerText');

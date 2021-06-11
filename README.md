@@ -5,6 +5,9 @@
   - ID
   - dateCreated
   - dateModified
+  - questionYear
+  - [ questionType ](#question-type)
+  - [ questionAuthor ](#question-author)
   - questionText
   - questionTextHasImage
 
@@ -33,6 +36,9 @@
   - ID
   - dateCreated
   - dateModified
+  - questionYear
+  - [ questionType ](#question-type)
+  - [ questionAuthor ](#question-author)
   - questionText
   - questionTextHasImage
   - answerText
@@ -72,3 +78,16 @@
 
 - `imageType`
   - `answer` OR `question`
+
+<a id="question-type"></a>
+
+- `questionType`
+  - `NGSA`
+  - `NGFA`
+  - `miscellaneous`
+
+<a id="question-author"></a>
+
+- `questionAuthor`
+  - `Simeon`
+  - `MOE`
