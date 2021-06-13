@@ -1,6 +1,6 @@
 import React from 'react';
-import PageButtons from './PageButtons';
-import PageArea from './PageArea';
+import PageButtons from './PageButtons/PageButtons';
+import PageArea from './PageArea/PageArea';
 
 function InfoArea({ data }) {
   return (

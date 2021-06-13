@@ -1,5 +1,5 @@
 import React from 'react';
-import { DeleteIcon, EditIcon } from '../assets/Icons';
+import { DeleteIcon, EditIcon } from '../../../assets/Icons';
 
 function Table({ data }) {
   const headers = [

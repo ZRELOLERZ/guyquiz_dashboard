@@ -9,7 +9,11 @@ function PageButtons() {
       <div className="flex justify-between">
         <div className="flex">
           {buttonNames.map((buttonName, index) => (
-            <PageButtonSingle key={index.toString()} buttonName={buttonName} />
+            <PageButtonSingle
+              key={index.toString()}
+              buttonName={buttonName}
+              index={index}
+            />
           ))}
         </div>
         <NewQuestionButton />
