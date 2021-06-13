@@ -10,9 +10,21 @@ const { Knex } = require('knex');
 exports.seed = function (knex) {
   return knex(tableNames.multipleChoiceTypeQuestion).then(function () {
     return knex(tableNames.multipleChoiceTypeQuestion).insert([
-      { questionText: 'What is 2 + 2?' },
-      { questionText: 'What is 2 + 10?' },
-      { questionText: 'What is 20 + 32?' }
+      {
+        questionText: 'What is 2 + 2?',
+        questionYear: 2020,
+        questionType: 'miscellaneous'
+      },
+      {
+        questionText: 'What is 2 + 10?',
+        questionYear: 2020,
+        questionType: 'miscellaneous'
+      },
+      {
+        questionText: 'What is 20 + 32?',
+        questionYear: 2020,
+        questionType: 'miscellaneous'
+      }
     ]);
   });
 };

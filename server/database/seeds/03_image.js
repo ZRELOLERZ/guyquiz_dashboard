@@ -22,17 +22,17 @@ exports.seed = function (knex) {
         {
           imageName: 'question1b',
           imageCaption: 'I am question1b',
-          choiceReferenceID: 1
+          choiceReferenceID: 2
         },
         {
           imageName: 'question1c',
           imageCaption: 'I am question1c',
-          choiceReferenceID: 1
+          choiceReferenceID: 3
         },
         {
           imageName: 'question2a',
           imageCaption: 'I am question2a',
-          choiceReferenceID: 2
+          choiceReferenceID: 4
         }
       ]);
     });
