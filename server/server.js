@@ -7,6 +7,10 @@ const {
   funcGetAllMultipleChoiceTypeQuestion
 } = require('./src/database_operations/multipleChoiceTypeQuestion/funcGetAllMultipleChoiceTypeQuestion');
 
+const {
+  funcGetAllEssayTypeQuestion
+} = require('./src/database_operations/EssayTypeQuestion/funcGetAllEssayTypeQuestion');
+
 const schema = buildSchema(`
     type MultipleChoiceTypeQuestion {
         ID: ID,
@@ -40,13 +44,29 @@ const schema = buildSchema(`
         imageCaption: String,
         choiceReferenceID: Int
     }
+
+    type EssayTypeQuestion {
+        ID: ID,
+        dateCreated: String,
+        dateModified: String,
+        questionYear: Int,
+        questionType: String,
+        questionAuthor: String,
+        questionText: String,
+        questionTextHasImage: Boolean
+        answerText: String,
+        answerTextHasImage: Boolean
+    }
+
     type Query {
         getAllMultipleChoiceTypeQuestion: [MultipleChoiceTypeQuestion]
+        getAllEssayTypeQuestion: [EssayTypeQuestion]
     }
 `);
 
 const root = {
-  getAllMultipleChoiceTypeQuestion: funcGetAllMultipleChoiceTypeQuestion
+  getAllMultipleChoiceTypeQuestion: funcGetAllMultipleChoiceTypeQuestion,
+  getAllEssayTypeQuestion: funcGetAllEssayTypeQuestion
 };
 
 const app = express();
